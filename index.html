@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/sky.css">
+		<script src="jquery.min.js"></script>
+		<script src="footer-reveal.js"></script>
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -21,21 +23,56 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style type="text/css">
+            .reveal div.header-left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                margin: 0;
+            }
+            .reveal div.header-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 0;
+                margin: 0;
+            }
+            .reveal div.footer-left {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 0;
+                margin: 0;
+            }
+            .reveal div.footer-right {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+		
 	</head>
+
+
 	<body>
 		<div class="reveal">
-				<header style="position: absolute;top: 25px; left: 50px; z-index:500; font-size:100px"></header>
+				<header  style="position: absolute;top: 25px; left: 50px; z-index:500; font-size:100px"></header>
+				<footer></footer>
 			<div class="slides">
-				<section>
+				<section data-state = "icon">
+					<style>.icon header:after { content: href="icon.png"; }</style>
 					<div>
-						<h1 >Mommy Overflow</h1>
+						<h1>Mommy Overflow</h1>
 					</div>
 				</section>
 
 				</section>
-				<section data-state ="header" data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-					<style>.header header:after { content: "The What"; }</style>
-					<p>MommyOverflow is community discussion board aimed at serving the stressful needs of new mothers. Community members are able post questions conerning the needs of the newbors or simply add thoughful insight or help to those in need.</p>
+				<section data-state ="title">
+					<style>.title header:after { content: "The What"; }</style>
+					<p>MommyOverflow is community discussion board aimed at serving the stressful needs of new mothers. Community members are able post questions conerning the needs of the newborns or simply add thoughful insight or help to those in need.</p>
 				</section>
 				<section data-state ="header1">
 						<style>.header1 header:after { content: "The Way"; }</style>
@@ -43,7 +80,7 @@
 						<li>User Access Protected Profile</li>
 						<li>Common Question Page</li>
 						<li>Personalized Questions Page</li>
-						<li>Itemized Responses for Each Question Poasted</li>
+						<li>Itemized Responses for Each Question Posted</li>
 					</ul>
 				</section>
 				<section data-state ="header2">
@@ -53,7 +90,7 @@
 							<li style="color:#cd7f32">CSS</li>
 							<li style="color:#cd7f32">Javascript/jQuery</li>
 							<li style="color:#cd7f32">AJAX, API, JSON</li>
-							<li style="color:#cd7f32">js.Node</li>
+							<li style="color:#cd7f32">Node.js</li>
 							<li style="color:#cd7f32">Express Server</li>
 						</ul>
 				</section>
@@ -64,7 +101,6 @@
 						<li style="color:silver">React based Application</li>
 						<li style="color:silver">New ES6 Javascript</li>
 						<li style="color: gold" >Passport.js - Authentification</li>
-						<li style="color: gold">GraphQL - API Query Language</li>
 						<li style="color: gold">Bulma - CSS Framework</li>
 						<li style="color: gold">Reveal.js -Presentation Application</li>
 					</ul>
@@ -72,8 +108,7 @@
 				<section data-state ="header4">
 						<style>.header4 header:after { content: "The Issues"; }</style>
 					<ul>
-						<li>PassPort.JS merge with front-end Ract App</li>
-						<li>GraphQL routing integration into application</li>
+						<li>PassPort.JS merge with front-end React App</li>
 						<li>Bulma CSS framework issues with React Modules</li>
 					</ul>
 				</section>
@@ -83,9 +118,10 @@
 				<section data-state ="header5">
 						<style>.header5 header:after { content: "The Future"; }</style>
 					<ul>
-						<li>API Call to XXXX for Children?</li>
-						<li>Comment update emails to submitted user???</li>
-						<li>XXXXXXXXXXXXXX</li>
+						<li>API Call grab outside data for issues submitted</li>
+						<li>Comment update email alerts to user who posted orginal question</li>
+						<li>Ratings for each comment posted on question</li>
+						<li>Clickable images for body parts to search for related questions</li>
 					</ul>
 				</section>
 				<section data-background="https://media3.giphy.com/media/l41m3YpztVBtugahW/200w.webp?cid=790b76115ccccf1a576f755341ec1a9a&rid=200w.webp" data-background-transition="zoom">
